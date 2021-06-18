@@ -1,6 +1,6 @@
 # Chrome Extension (built with TypeScript + React)
 
-> This project is a boilerplate project to allow you to quickly build chrome extensions using TypeScript and React.
+> This project helps collect message data and download it in form of csv file.
 
 ## Building
 
