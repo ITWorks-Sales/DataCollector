@@ -1,7 +1,17 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import Popup from './Popup';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import Overlay from "./Overlay";
+import {
+  getCurrentList,
+  initCurrentList,
+} from "../localStorageInteraction/currentList";
+import { initCurrentIndex } from "../localStorageInteraction/currentIndex";
 
-chrome.tabs.query({ active: true, currentWindow: true }, tab => {
-    ReactDOM.render(<Popup />, document.getElementById('popup'));
-});
+const init = async () => {
+  await initCurrentIndex();
+  await initCurrentList();
+  console.log(await getCurrentList());
+  ReactDOM.render(<Overlay />, document.getElementById("popup"));
+};
+
+init();

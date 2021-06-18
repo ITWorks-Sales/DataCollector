@@ -1,0 +1,19 @@
+@import "~antd/dist/antd.dark.css";
+
+#root {
+  min-width: 600px;
+}
+
+#element {
+  position: fixed;
+  bottom: 10%;
+  right: 0px;
+  z-index: 9999;
+  margin: 50px;
+  width: 340px;
+}
+
+#text {
+  color: white;
+  text-align: center;
+}
